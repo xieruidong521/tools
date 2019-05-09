@@ -10,7 +10,8 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+//工具类
+Route::group(['prefix'=>'tool','namespace'=>'Tool'],function(){
+    Route::get('/run/php','PhpController@index');
+    Route::post('/run/php','PhpController@run')->name('tool.run.php');
 });
