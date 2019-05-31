@@ -17,7 +17,10 @@ class GoogleAuthenticator
     public function create($name)
     {
         $secret=$this->googleAuth->createSecret();
-        $url=$this->googleAuth->getQRCodeGoogleUrl($name,$secret,config('google.authenticatorname'));
-        return [$secret,$url];
+
+        return [
+            $secret,
+            $this->googleAuth->getQRCodeGoogleUrl($name,$secret,config('google.authenticatorname'))
+        ];
     }
 }
