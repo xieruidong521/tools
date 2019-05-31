@@ -10,11 +10,21 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::get('/',function(){
-    return redirect(route('tool.run.php'));
-});
+Route::get('/','Practice\ModelController@boot');
+Route::get('/download','Practice\DownloadController@index')->name('download');
 //工具类
 Route::group(['prefix'=>'tool','namespace'=>'Tool'],function(){
     Route::get('/run/php','PhpController@index');
     Route::post('/run/php','PhpController@run')->name('tool.run.php');
+});
+Route::get('admin/system/setting','Practice\ModelController@admin')->name('admin.system.setting');
+
+//谷歌验证器
+Route::group(['prefix'=>'google','namespace'=>'Practice'],function(){
+    //绑定
+    Route::get('bind/{no}','GoogleController@bind');
+    Route::post('bind/{no}','GoogleController@addBind');
+    //检查
+    Route::get('check/{no}','GoogleController@check');
+    Route::post('check/{no}','GoogleController@makeCheck');
 });

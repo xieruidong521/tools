@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\MaintenanceMode;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -14,7 +15,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+        MaintenanceMode::class
     ];
 
     /**

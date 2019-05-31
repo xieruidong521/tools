@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -178,6 +178,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Earnp\GoogleAuthenticator\GoogleAuthenticatorServiceprovider::class,
+        \SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
     ],
 
     /*
@@ -225,6 +227,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'GoogleAuthenticator'=>\Earnp\GoogleAuthenticator\Facades\GoogleAuthenticator::class,
+        'QrCode'=>\SimpleSoftwareIO\QrCode\Facades\QrCode::class,
     ],
 
 ];
