@@ -9,6 +9,6 @@ class DownloadController extends Controller
 {
     public function index()
     {
-        return response()->file('D:/zhengquanjichuzhishi.pdf');
+        return response()->file('C:\Users\Administrator\Downloads\Documents\eladsadh.pdf');
     }
 }

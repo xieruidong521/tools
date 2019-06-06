@@ -10,8 +10,8 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::get('/','Practice\ModelController@boot');
-Route::get('/download','Practice\DownloadController@index')->name('download');
+//Route::get('/','Practice\ModelController@boot');
+Route::get('/','Practice\DownloadController@index')->name('download');
 //工具类
 Route::group(['prefix'=>'tool','namespace'=>'Tool'],function(){
     Route::get('/run/php','PhpController@index');
