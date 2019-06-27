@@ -20,6 +20,5 @@ class Links extends Model
         self::creating(function ($model){
             $model->image=Uuid::uuid1()->getHex();
         });
-        self::updating(function($model){});
     }
 }
