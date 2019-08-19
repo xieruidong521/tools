@@ -21,11 +21,15 @@ class GoogleController extends Controller
     public function bind($no)
     {
         $user=$this->user->findByNo($no);
+        if(!$user)
+        {
+            $user=$this->user->create($no);
+        }
         if($user->googlesecret)
         {
             return redirect('google/check/'.$no);
         }
-        list($secret,$codeurl)=$this->googleAuth->create($user->no);
+        list($secret,$codeurl)=$this->googleAuth->create($user?$user->no:$no);
         return view('google.bind',compact('user','secret','codeurl'));
     }
     public function addBind($no,GoogleAuthenticatorBindRequest $request)

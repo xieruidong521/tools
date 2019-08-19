@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\Verse::class,
+        Commands\Welcome::class,
     ];
 
     /**

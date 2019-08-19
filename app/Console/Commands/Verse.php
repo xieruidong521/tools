@@ -52,6 +52,7 @@ class Verse extends Command
      */
     public function handle()
     {
-        echo iconv('utf-8','gbk',$this->verses[array_rand($this->verses)]);
+        $verse=$this->verses[array_rand($this->verses)];
+        $this->info($verse);
     }
 }

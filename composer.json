@@ -9,7 +9,8 @@
         "laravel/framework": "5.3.*",
         "moontoast/math": "^1.1",
         "earnp/laravel-google-authenticator": "dev-master",
-        "simplesoftwareio/simple-qrcode": "^2.0"
+        "simplesoftwareio/simple-qrcode": "^2.0",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

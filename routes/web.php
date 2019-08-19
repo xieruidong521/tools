@@ -27,8 +27,12 @@ Route::group(['prefix'=>'google','namespace'=>'Practice'],function(){
     //检查
     Route::get('check/{no}','GoogleController@check');
     Route::post('check/{no}','GoogleController@makeCheck');
+
+    #谷歌验证码
+    Route::resource('/recaptcha',"RecaptchaController");
 });
 
 Route::group(['prefix'=>'func','namespace'=>'Practice'],function (){
     Route::get('test','FuncController@index');
+    Route::get('redis','RedisController@index');
 });
