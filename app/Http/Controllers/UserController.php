@@ -6,19 +6,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    protected $user;
-    public function __construct(UserInterface $imChatUser)
-    {
-        $this->user=$imChatUser;
-    }
-    public function lists(Request $request)
+    public function lists(UserInterface $user,Request $request)
     {
         $limit=$request->get('limit',10);
-        $users=$this->user->getUserLists($limit);
+        $users=$user->getUserLists($limit);
 
         return view('im_chat_user.lists',compact('users'));
-    }
-    public function addresses()
-    {
     }
 }
