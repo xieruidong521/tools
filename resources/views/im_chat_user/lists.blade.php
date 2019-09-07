@@ -29,7 +29,7 @@
                     <td>{{$user->username}}</td>
                     <td>{{$user->guid}}</td>
                     <td>
-                        <img src="{{$user->logo}}" alt="logo" onerror="this.src='https://www.baidu.com/img/bd_logo.png'" style="max-width:100px;max-height: 100px;">
+                        <img src="{{$user->logo}}" alt="logo" onerror="this.style.display='none'" style="max-width:100px;max-height: 100px;">
                     </td>
                     <td>{{date('Y-m-d H:i',$user->userInfo->w_time)}}</td>
                 </tr>
