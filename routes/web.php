@@ -36,3 +36,6 @@ Route::group(['prefix'=>'func','namespace'=>'Practice'],function (){
     Route::get('test','FuncController@index');
     Route::get('redis','RedisController@index');
 });
+
+Route::get('user/list','UserController@lists');
+Route::get('user/addresses','UserController@addresses');

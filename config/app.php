@@ -180,6 +180,9 @@ return [
 
         Earnp\GoogleAuthenticator\GoogleAuthenticatorServiceprovider::class,
         \SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+
+        //users
+        App\Providers\UserServiceProvider::class,
     ],
 
     /*
