@@ -25,9 +25,8 @@ class ImChatUser implements UserInterface
     {
         return $this->user->select([
             'id',
-            'project_appid',
+            'project_appid as appid',
             'username',
-            'guid',
             'logo',
         ])
             ->orderBy('id','desc')
