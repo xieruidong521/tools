@@ -10,7 +10,8 @@
         "moontoast/math": "^1.1",
         "earnp/laravel-google-authenticator": "dev-master",
         "simplesoftwareio/simple-qrcode": "^2.0",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "andreasindal/laravel-markdown": "1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

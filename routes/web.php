@@ -39,3 +39,8 @@ Route::group(['prefix'=>'func','namespace'=>'Practice'],function (){
 
 Route::get('user/list','UserController@lists');
 Route::get('user/addresses','UserController@addresses');
+
+Route::group(['prefix'=>'api','namespace'=>'Api'],function (){
+    Route::get('/','ShowController@lists');
+    Route::get('{item}','ShowController@show')->name('api.item');
+});
