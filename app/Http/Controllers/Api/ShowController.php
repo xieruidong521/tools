@@ -26,7 +26,7 @@ class ShowController extends Controller
             return back()->with('info','API文档不存在');
         }
         $md_content=file_get_contents($api_file);
-        $md_html=markdown($md_content);
-        return view('api.show',compact('md_html','dir'));
+        $md_content=json_encode($md_content,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
+        return view('api.show',compact('md_content','dir'));
     }
 }
