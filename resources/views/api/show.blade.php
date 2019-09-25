@@ -3,7 +3,6 @@
 @section('css')
     <script src="{{url('static/md/zepto.min.js')}}"></script>
     <link href="{{url('static/md/css/editormd.preview.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{url('css/github-markdown.css')}}">
     <script src="{{url('static/md/editormd.min.js')}}"></script>
     <script src="{{url('static/md/lib/marked.min.js')}}"></script>
     <script src="{{url('static/md/lib/prettify.min.js')}}"></script>

@@ -11,7 +11,7 @@
 |
 */
 //Route::get('/','Practice\ModelController@boot');
-Route::get('/','Practice\DownloadController@index')->name('download');
+//Route::get('/','Practice\DownloadController@index')->name('download');
 //工具类
 Route::group(['prefix'=>'tool','namespace'=>'Tool'],function(){
     Route::get('/run/php','PhpController@index');
