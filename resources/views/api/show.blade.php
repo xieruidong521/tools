@@ -7,7 +7,7 @@
     <script src="{{url('static/md/lib/marked.min.js')}}"></script>
     <script src="{{url('static/md/lib/prettify.min.js')}}"></script>
     <style>
-        .md-content{width: 50%;min-width: 500px;margin: auto;}
+        .md-content{width: 100%;margin: auto;}
     </style>
 @endsection
 @section('body')
