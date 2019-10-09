@@ -15,10 +15,11 @@
 @endsection
 
 @section('js')
-    <script>
+    <script id="script">
         let view=editormd.markdownToHTML('markdown-view',{
             markdown:'{!! $md_content !!}',
             htmlDecode:true,
         })
+        document.getElementById('script').innerHTML=''
     </script>
 @endsection
